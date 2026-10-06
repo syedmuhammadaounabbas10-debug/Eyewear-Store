@@ -1,0 +1,48 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // STRICT SINGLE ADMIN CONSTRAINT
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email == "nazar.pk.offical@gmail.com";
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // User Profile Rules
+    match /users/{userId} {
+      allow get, write: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+    }
+
+    // Orders Rules
+    match /orders/{orderId} {
+      allow create: if isSignedIn();
+      allow get, list, update, delete: if isAdmin() || (
+        isSignedIn() && (
+          resource.data.userId == request.auth.uid ||
+          resource.data.customer.email == request.auth.email
+        )
+      );
+    }
+
+    // Products Rules
+    match /products/{productId} {
+      allow read: if true;
+      allow write, delete: if isAdmin();
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Nazar.pk - Architectural Luxury Eyewear",
+  "description": "Bespoke handcrafted optical frames, polarized sunglasses, home try-on, virtual studio, and custom AI frame design for Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
