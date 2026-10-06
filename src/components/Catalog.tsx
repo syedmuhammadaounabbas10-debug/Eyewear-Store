@@ -209,19 +209,19 @@ export const Catalog: React.FC<CatalogProps> = ({
                   {/* Tags */}
                   <div className="absolute top-3 left-3 z-10 flex flex-col gap-1 items-start">
                     {p.isBestseller && (
-                      <span className="bg-[#c9a24b] text-[#0f172a] text-[10px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider shadow">
+                      <span className="bg-[#c9a24b] text-[#0f172a] text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow">
                         Bestseller
                       </span>
                     )}
                     {p.isNew && (
-                      <span className="bg-[#0f172a] text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider">
+                      <span className="bg-[#0f172a] text-white text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider">
                         New Winter '26
                       </span>
                     )}
                   </div>
 
                   {/* Rating Tag */}
-                  <div className="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full border border-slate-200 text-[11px] font-bold text-slate-800 flex items-center gap-1 shadow-sm">
+                  <div className="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full border border-slate-200 text-xs font-bold text-slate-800 flex items-center gap-1 shadow-sm">
                     <Star className="w-3 h-3 fill-amber-400 text-amber-500" />
                     <span>{p.rating}</span>
                   </div>

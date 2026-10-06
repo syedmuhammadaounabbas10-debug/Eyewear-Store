@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
 
           {/* Atelier Stores Column */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#c9a24b]">
+            <h4 className="text-sm font-bold text-[#c9a24b]">
               Atelier Showrooms
             </h4>
             <div className="space-y-3 text-xs text-slate-300">
@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
 
           {/* Customer Care Column */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#c9a24b]">
+            <h4 className="text-sm font-bold text-[#c9a24b]">
               Customer Care & Trial
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
 
           {/* Payment Methods Column */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#c9a24b]">
+            <h4 className="text-sm font-bold text-[#c9a24b]">
               Accepted Payments
             </h4>
             <div className="space-y-1.5 text-xs text-slate-400">

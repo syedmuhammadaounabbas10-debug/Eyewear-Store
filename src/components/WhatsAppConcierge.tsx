@@ -25,7 +25,8 @@ export const WhatsAppConcierge: React.FC = () => {
         <div className="mb-3 bg-white border border-slate-200 shadow-xl rounded-2xl p-3.5 max-w-xs text-xs text-slate-800 relative animate-in fade-in slide-in-from-bottom-2">
           <button
             onClick={() => setShowPrompt(false)}
-            className="absolute top-2 right-2 text-slate-400 hover:text-black"
+            className="absolute top-2 right-2 text-slate-400 hover:text-black p-1"
+            aria-label="Dismiss prompt"
           >
             <X className="w-3.5 h-3.5" />
           </button>
@@ -33,7 +34,7 @@ export const WhatsAppConcierge: React.FC = () => {
             <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping shrink-0 mt-1" />
             <div>
               <p className="font-bold text-[#0f172a]">Optical Specialist Online</p>
-              <p className="text-slate-500 text-[11px] mt-0.5">
+              <p className="text-slate-600 text-xs mt-0.5 leading-normal">
                 "Need help with your prescription or frame sizing?"
               </p>
             </div>
@@ -50,17 +51,21 @@ export const WhatsAppConcierge: React.FC = () => {
               <MessageSquare className="w-5 h-5 fill-white" />
               <div>
                 <h4 className="font-bold text-sm">Nazar WhatsApp Concierge</h4>
-                <p className="text-[10px] text-white/90">Licensed Optometrists Active</p>
+                <p className="text-xs text-white/95">Licensed Optometrists Active</p>
               </div>
             </div>
-            <button onClick={() => setIsOpenChat(false)} className="text-white hover:opacity-80">
+            <button
+              onClick={() => setIsOpenChat(false)}
+              className="text-white hover:opacity-80 p-1"
+              aria-label="Close WhatsApp chat"
+            >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Quick Topics */}
           <div className="p-4 space-y-2 text-xs">
-            <p className="text-slate-500 font-bold uppercase text-[10px]">Select a quick question:</p>
+            <p className="text-slate-600 font-bold uppercase text-xs">Select a quick question:</p>
             {QUICK_TOPICS.map((topic, idx) => (
               <button
                 key={idx}

@@ -5,6 +5,18 @@
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: #fafafa;
     color: #0f172a;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Global accessible focus rings */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #c9a24b !important;
+    outline-offset: 2px !important;
   }
 }
 
@@ -24,7 +36,28 @@
   background: #94a3b8;
 }
 
-/* Glassmorphism header blur */
+@layer components {
+  /* Standardized Button System (Fix for Issue 1) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] bg-[#0f172a] hover:bg-[#1e293b] text-white text-xs font-bold rounded-lg shadow-sm transition-all active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-lg border border-slate-200 transition-all active:scale-[0.98];
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] bg-[#c9a24b] hover:bg-amber-500 text-[#0f172a] text-xs font-bold rounded-lg shadow-sm transition-all active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] bg-white hover:bg-slate-50 text-[#0f172a] text-xs font-bold rounded-lg border border-slate-300 transition-all active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-3 py-1.5 min-h-[36px] text-slate-700 hover:text-[#0f172a] hover:bg-slate-100 text-xs font-semibold rounded-md transition-colors;
+  }
+}
 .glass-nav {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);

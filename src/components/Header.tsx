@@ -39,13 +39,13 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="bg-[#0f172a] text-white text-xs py-2 px-4">
         <div className="max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left font-medium">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] uppercase font-bold bg-[#c9a24b] text-[#0f172a]">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs uppercase font-bold bg-[#c9a24b] text-[#0f172a]">
               FREE SHIPPING
             </span>
             <span>Complimentary Courier Delivery Across Pakistan on Orders Over PKR 10,000</span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] text-slate-300">
+          <div className="flex items-center gap-4 text-xs text-slate-300">
             <span className="flex items-center gap-1">
               <MapPin className="w-3 h-3 text-[#c9a24b]" /> Lahore • Karachi • Islamabad
             </span>
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <Sparkles className="w-4 h-4 text-[#c9a24b]" />
               <span>Custom Frame Studio (AI)</span>
-              <span className="bg-[#c9a24b] text-[#0f172a] text-[10px] font-bold px-1.5 py-0.2 rounded-full uppercase">
+              <span className="bg-[#c9a24b] text-[#0f172a] text-xs font-bold px-1.5 py-0.5 rounded-full uppercase">
                 1K-4K
               </span>
             </button>

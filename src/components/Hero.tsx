@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Hero Text Column */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c9a24b]/15 border border-[#c9a24b]/40 text-[#c9a24b] text-xs font-semibold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c9a24b]/15 border border-[#c9a24b]/40 text-[#c9a24b] text-xs font-semibold tracking-wide">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Architectural Optics for Pakistan</span>
             </div>
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({
               >
                 <Sparkles className="w-4 h-4 text-[#c9a24b]" />
                 <span>Design Custom Frame (AI)</span>
-                <span className="text-[10px] bg-[#c9a24b] text-[#0f172a] font-bold px-1.5 py-0.5 rounded">
+                <span className="text-xs bg-[#c9a24b] text-[#0f172a] font-bold px-1.5 py-0.5 rounded">
                   4K
                 </span>
               </button>
@@ -102,8 +102,8 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="absolute bottom-6 left-6 right-6 bg-slate-950/80 backdrop-blur-md border border-slate-800 rounded-xl p-4 text-left">
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] font-bold text-[#c9a24b] uppercase tracking-widest">
-                      FEATURED ATELIER EDITION
+                    <span className="text-xs font-semibold text-[#c9a24b] tracking-wide">
+                      Featured Atelier Edition
                     </span>
                     <h3 className="text-lg font-bold text-white mt-0.5">The Margalla Titan</h3>
                     <p className="text-xs text-slate-300">Grade-5 Japanese Titanium • 53-18-145mm</p>

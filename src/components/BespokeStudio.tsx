@@ -351,11 +351,15 @@ export const BespokeStudio: React.FC<BespokeStudioProps> = ({
         </div>
 
         {/* Right Preview Canvas */}
-        <div className="lg:col-span-7 bg-white border border-slate-200 rounded-xl p-6 shadow-sm min-h-[520px] flex flex-col justify-between">
+        <div
+          className="lg:col-span-7 bg-white border border-slate-200 rounded-xl p-6 shadow-sm min-h-[520px] flex flex-col justify-between"
+          aria-live="polite"
+          role="status"
+        >
           <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
             <div>
-              <span className="text-[10px] font-extrabold text-[#c9a24b] uppercase tracking-widest">
-                LIVE CANVAS
+              <span className="text-xs font-bold text-[#c9a24b] tracking-wide">
+                Live Canvas
               </span>
               <h3 className="text-lg font-bold text-[#0f172a] font-['Plus_Jakarta_Sans']">
                 {generatedImageUrl ? 'Custom Frame Concept' : 'Preview Canvas'}

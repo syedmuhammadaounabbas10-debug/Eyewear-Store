@@ -118,7 +118,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full transition-colors"
+          className="absolute top-4 right-4 p-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+          aria-label="Close checkout modal"
         >
           <X className="w-5 h-5" />
         </button>
@@ -126,13 +127,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         {!completedOrder ? (
           <form onSubmit={handlePlaceOrder} className="space-y-6">
             <div>
-              <span className="text-xs font-bold text-[#c9a24b] uppercase tracking-wider">
-                SECURE CHECKOUT • PAKISTAN
+              <span className="text-xs font-semibold text-[#c9a24b] tracking-wide">
+                Secure Checkout • Pakistan
               </span>
               <h2 className="text-2xl font-extrabold text-[#0f172a] font-['Plus_Jakarta_Sans']">
                 Complete Your Eyewear Order
               </h2>
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-xs text-slate-600 mt-1">
                 Enter your shipping address in Pakistan and select your payment method.
               </p>
             </div>
@@ -142,7 +143,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               <MessageSquare className="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold">WhatsApp Confirmation Note:</span>
-                <p className="text-[11px] text-emerald-800 mt-0.5">
+                <p className="text-xs text-emerald-900 mt-0.5 leading-relaxed">
                   Aap ka order <strong>WhatsApp (03245908220)</strong> par confirm hoga. Order status aur tracking updates bhi WhatsApp par send kiye jayenge.
                 </p>
               </div>
